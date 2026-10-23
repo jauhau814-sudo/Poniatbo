@@ -1,0 +1,329 @@
+{
+  "topics": 1752,
+  "cards": 9076,
+  "grades": {
+    "5": [
+      {
+        "id": "math",
+        "name": "Математика",
+        "topics": 35,
+        "cards": 175
+      },
+      {
+        "id": "russian",
+        "name": "Русский язык",
+        "topics": 49,
+        "cards": 245
+      },
+      {
+        "id": "biology",
+        "name": "Биология",
+        "topics": 18,
+        "cards": 90
+      },
+      {
+        "id": "geography",
+        "name": "География",
+        "topics": 24,
+        "cards": 120
+      },
+      {
+        "id": "history",
+        "name": "История",
+        "topics": 49,
+        "cards": 245
+      },
+      {
+        "id": "informatics",
+        "name": "Информатика",
+        "topics": 30,
+        "cards": 145
+      },
+      {
+        "id": "literature",
+        "name": "Литература",
+        "topics": 5,
+        "cards": 25
+      },
+      {
+        "id": "english",
+        "name": "Английский язык",
+        "topics": 31,
+        "cards": 204
+      }
+    ],
+    "6": [
+      {
+        "id": "math",
+        "name": "Математика",
+        "topics": 128,
+        "cards": 650
+      },
+      {
+        "id": "russian",
+        "name": "Русский язык",
+        "topics": 78,
+        "cards": 390
+      },
+      {
+        "id": "biology",
+        "name": "Биология",
+        "topics": 44,
+        "cards": 220
+      },
+      {
+        "id": "geography",
+        "name": "География",
+        "topics": 44,
+        "cards": 220
+      },
+      {
+        "id": "history",
+        "name": "История",
+        "topics": 85,
+        "cards": 425
+      },
+      {
+        "id": "informatics",
+        "name": "Информатика",
+        "topics": 10,
+        "cards": 50
+      },
+      {
+        "id": "literature",
+        "name": "Литература",
+        "topics": 5,
+        "cards": 25
+      },
+      {
+        "id": "english",
+        "name": "Английский язык",
+        "topics": 30,
+        "cards": 170
+      }
+    ],
+    "7": [
+      {
+        "id": "algebra",
+        "name": "Алгебра",
+        "topics": 39,
+        "cards": 195
+      },
+      {
+        "id": "geometry",
+        "name": "Геометрия",
+        "topics": 36,
+        "cards": 180
+      },
+      {
+        "id": "physics",
+        "name": "Физика",
+        "topics": 33,
+        "cards": 165
+      },
+      {
+        "id": "russian",
+        "name": "Русский язык",
+        "topics": 41,
+        "cards": 205
+      },
+      {
+        "id": "biology",
+        "name": "Биология",
+        "topics": 30,
+        "cards": 150
+      },
+      {
+        "id": "geography",
+        "name": "География",
+        "topics": 36,
+        "cards": 180
+      },
+      {
+        "id": "history",
+        "name": "История",
+        "topics": 69,
+        "cards": 345
+      },
+      {
+        "id": "statistics",
+        "name": "Вероятность и статистика",
+        "topics": 15,
+        "cards": 75
+      },
+      {
+        "id": "informatics",
+        "name": "Информатика",
+        "topics": 10,
+        "cards": 50
+      },
+      {
+        "id": "literature",
+        "name": "Литература",
+        "topics": 5,
+        "cards": 25
+      },
+      {
+        "id": "english",
+        "name": "Английский язык",
+        "topics": 30,
+        "cards": 154
+      }
+    ],
+    "8": [
+      {
+        "id": "algebra",
+        "name": "Алгебра",
+        "topics": 23,
+        "cards": 115
+      },
+      {
+        "id": "geometry",
+        "name": "Геометрия",
+        "topics": 23,
+        "cards": 115
+      },
+      {
+        "id": "physics",
+        "name": "Физика",
+        "topics": 28,
+        "cards": 140
+      },
+      {
+        "id": "russian",
+        "name": "Русский язык",
+        "topics": 28,
+        "cards": 140
+      },
+      {
+        "id": "chemistry",
+        "name": "Химия",
+        "topics": 29,
+        "cards": 145
+      },
+      {
+        "id": "biology",
+        "name": "Биология",
+        "topics": 40,
+        "cards": 200
+      },
+      {
+        "id": "geography",
+        "name": "География",
+        "topics": 32,
+        "cards": 160
+      },
+      {
+        "id": "history",
+        "name": "История",
+        "topics": 53,
+        "cards": 265
+      },
+      {
+        "id": "statistics",
+        "name": "Вероятность и статистика",
+        "topics": 13,
+        "cards": 65
+      },
+      {
+        "id": "informatics",
+        "name": "Информатика",
+        "topics": 10,
+        "cards": 50
+      },
+      {
+        "id": "literature",
+        "name": "Литература",
+        "topics": 5,
+        "cards": 25
+      },
+      {
+        "id": "english",
+        "name": "Английский язык",
+        "topics": 41,
+        "cards": 254
+      }
+    ],
+    "9": [
+      {
+        "id": "algebra",
+        "name": "Алгебра",
+        "topics": 16,
+        "cards": 80
+      },
+      {
+        "id": "geometry",
+        "name": "Геометрия",
+        "topics": 16,
+        "cards": 80
+      },
+      {
+        "id": "physics",
+        "name": "Физика",
+        "topics": 25,
+        "cards": 125
+      },
+      {
+        "id": "russian",
+        "name": "Русский язык",
+        "topics": 22,
+        "cards": 110
+      },
+      {
+        "id": "chemistry",
+        "name": "Химия",
+        "topics": 58,
+        "cards": 315
+      },
+      {
+        "id": "biology",
+        "name": "Биология",
+        "topics": 24,
+        "cards": 120
+      },
+      {
+        "id": "geography",
+        "name": "География",
+        "topics": 26,
+        "cards": 130
+      },
+      {
+        "id": "history",
+        "name": "История",
+        "topics": 44,
+        "cards": 220
+      },
+      {
+        "id": "society",
+        "name": "Обществознание",
+        "topics": 20,
+        "cards": 100
+      },
+      {
+        "id": "statistics",
+        "name": "Вероятность и статистика",
+        "topics": 10,
+        "cards": 50
+      },
+      {
+        "id": "informatics",
+        "name": "Информатика",
+        "topics": 23,
+        "cards": 342
+      },
+      {
+        "id": "literature",
+        "name": "Литература",
+        "topics": 5,
+        "cards": 25
+      },
+      {
+        "id": "english",
+        "name": "Английский язык",
+        "topics": 129,
+        "cards": 582
+      }
+    ]
+  },
+  "guideTopic": "М6-029"
+}

@@ -1,0 +1,113 @@
+/* Shared palette for the public page and study workspace. */
+:root{--paper:#f6f7f2;--card:#fffefa;--white:#fffefa;--ink:#25203f;--muted:#3c26ad;--line:#cdc5f3;--orange:#3c3464;--orange-dark:#2e284e;--green:#3c3464;--navy:#3c3464;--blue:#3c3464;--mint:#dfdbf7;--lime:#d1caf4;--shadow:0 4px 18px #25203f06}
+body{background:var(--paper);color:var(--ink)}
+:where(button,a,input,select,textarea):focus-visible{outline:3px solid #5940d5;outline-offset:4px}
+button,.btn,.button,a{ -webkit-tap-highlight-color:transparent }
+button{touch-action:manipulation}
+.site-header{background:var(--card)}
+.site-header .logo-symbol,.brand-mark{background:var(--ink);border-radius:12px;color:var(--white);box-shadow:none}
+.header-nav a,.site-header .header-nav a{border-radius:9px}
+.site-header .header-nav a.active{background:var(--mint)}
+.profile-dot{border-radius:50%;background:var(--mint)}
+.btn,.button,.top-login{border-radius:10px;transition:background .16s,border-color .16s,box-shadow .16s;min-height:46px}
+.btn-orange,.btn-blue,.button-primary,.button-ink{background:var(--green);border-color:var(--green);color:#fffefa;box-shadow:0 2px 3px #25203f10}
+.btn-orange:hover,.btn-blue:hover,.button-primary:hover,.button-ink:hover{background:var(--orange-dark);border-color:var(--orange-dark);color:#fffefa;transform:none;box-shadow:0 4px 12px #25203f15}
+.btn-light{background:var(--card);border-color:#b8aeed;color:var(--ink)}
+.btn-light:hover{background:var(--mint);border-color:#6b55da}
+button:disabled,.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none;transform:none}
+.card,.curriculum-poster,.new-subject,.library-sidebar,.learning-shell,.lesson-step,.lesson-reference,.scan-panel,.scan-guide,.diagnostic-controls{border-radius:14px;border-color:var(--line)}
+.library-sidebar{background:var(--card)}
+.subject-tab{border-radius:9px}
+.subject-tab.active{background:var(--mint);color:var(--ink)}
+.subject-tab:hover{background:#e8e5f9}
+.search-field,.progress-select select,.input,.textarea,.field input,.password-wrap{border-radius:10px;border-color:#b8aeed;background:var(--card)}
+.search-field:focus-within,.password-wrap:focus-within{outline:2px solid #5940d5;outline-offset:2px}
+.eyebrow,.section-label{color:#3a25a6}
+.poster-card.curriculum-poster{border-radius:14px;box-shadow:0 3px 12px #25203f04}
+.curriculum-poster:hover{border-color:#735edc;box-shadow:0 7px 20px #25203f0a;transform:translateY(-2px)}
+.poster-info{padding:21px}.poster-info small{color:#3c26ad}.poster-info strong{font-size:15px;line-height:1.6}
+.poster-length{border-radius:6px!important}
+.poster-progress{background:#dfdbf7}.poster-progress i{background:#432ac1}
+.grade-selector{padding:22px 24px 24px;margin:25px 0 30px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.grade-selector-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.grade-selector-heading .eyebrow{font-size:11px;letter-spacing:.1em}
+.grade-selector-heading>span:last-child{font-size:12px;color:var(--muted)}
+.grade-selector .grade-bar{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0;padding:0;overflow:visible}
+.grade-selector .grade-bar .chip{display:flex;align-items:center;gap:10px;min-height:76px;width:100%;padding:14px 18px;border:1px solid #c7bff1;border-radius:11px;background:#f1eefc;color:#342094;box-shadow:none;transition:background .16s,border-color .16s}
+.grade-selector .chip strong{font-size:29px;line-height:1;font-weight:800;letter-spacing:-.04em}
+.grade-selector .chip>span{font-size:13px;font-weight:600}
+.grade-selector .chip i{font-style:normal;margin-left:auto;font-size:17px;color:#5239d3}
+.grade-selector .grade-bar .chip:hover{background:#e0dcf7;border-color:#7f6cdf;transform:none}
+.grade-selector .grade-bar .chip.active{background:#3c3464;border-color:#3c3464;color:#fffefa;box-shadow:0 3px 8px #25203f15}
+.grade-selector .chip.active i{color:#d1caf4}
+.class-picker{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;max-width:380px;width:100%;padding:8px;border:1px solid #bbb0ee;border-radius:14px;background:#e9e6fa}
+.class-picker>button{width:100%;height:auto;min-height:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:1px solid transparent;border-radius:9px;color:var(--ink);background:transparent;box-shadow:none}
+.class-picker>button strong{font-size:24px;line-height:1.1}.class-picker>button span{font-size:10px;font-weight:600}
+.class-picker>button:hover{background:#d5cff5;transform:none}
+.class-picker>button.active,.class-picker>button[aria-pressed=true]{background:var(--green);color:var(--white);border-color:var(--green);box-shadow:0 2px 6px #25203f14}
+.class-caption{color:var(--green)}
+.highlight:after{background:#c5bdf0}.demo-sheet{border-color:#b8aeed;box-shadow:7px 7px 0 #d1caf4;border-radius:16px}
+.reference-page,.review-paper,.auth-dialog{border-radius:14px}.auth-dialog{box-shadow:0 16px 70px #25203f22}
+.subject-section{background:#dfdbf7}.review-section{background:#dfdbf7}
+.top-login{padding:8px 16px;border:1px solid #b8aeed;background:var(--card)}
+.fraction-bar i{background:#c7bff1}.fraction-bar.half i:nth-child(-n+2),.fraction-bar.quarter i:first-child{background:#432ac1}
+.scan-guide,.hint-panel,.english-course-note,.photo-solution-entry,.concept-board,.visual-method{background:#e5e1f9;border-color:var(--line);color:var(--ink)}
+.level-badge{border-color:#a497e8;background:#f1eefc;color:var(--ink)}
+/* Colour is reinforced by text and symbols for answer states. */
+.feedback.good,.demo-feedback.good{color:#322b54}.feedback.good{background:#ddd7f7}
+.feedback.try,.guide-mistake,.demo-answers>button.selected{background:#e2def8;border-color:#a193e7;color:#423970}
+.form-error,.wrong-equation,.demo-feedback.try{color:#3d26ae}
+.demo-answers>button.correct{background:#d6d0f5;border-color:#432ac1;color:var(--ink)}
+.import-label:focus-within,.upload-zone:focus-within{outline:3px solid #5940d5;outline-offset:4px}
+.import-label:has(input:focus-visible){outline:3px solid #5940d5}
+@media(max-width:760px){
+ .grade-selector{padding:17px 13px;margin:20px 0 24px;border-radius:13px}
+ .grade-selector-heading{align-items:flex-start;flex-direction:column;gap:4px;margin-bottom:13px}
+ .grade-selector-heading>span:last-child{font-size:11px}
+ .grade-selector .grade-bar{gap:6px}
+ .grade-selector .grade-bar .chip{min-height:77px;padding:12px 4px;flex-direction:column;justify-content:center;gap:6px;border-radius:9px}
+ .grade-selector .chip strong{font-size:26px}.grade-selector .chip>span{font-size:10px}.grade-selector .chip i{display:none}
+ .class-picker{max-width:380px;gap:5px}.class-picker>button{min-height:66px}
+ .poster-info strong{font-size:14px}
+ .hero .demo-sheet{box-shadow:5px 5px 0 #d1caf4}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
+
+/* Violet, lavender and coral palette, with restrained yellow accents. */
+:root{--paper:#f7f7fc;--card:#ffffff;--white:#ffffff;--ink:#302653;--muted:#76718a;--line:#e5e1f2;--orange:#fa5c75;--orange-dark:#e74764;--green:#6750e8;--navy:#6750e8;--blue:#6750e8;--mint:#eee9ff;--lime:#e3dcff;--shadow:0 4px 18px #39297808}
+body{background:var(--paper);color:var(--ink)}
+.site-header,.topbar,.library-sidebar{background:#fff}
+.site-header .logo-symbol,.brand-mark{background:#463478;color:white}
+.header-nav a.active,.site-header .header-nav a.active,.subject-tab.active{background:#eee9ff;color:#5b43ce}
+.profile-dot{background:#eee9ff;color:#5b43ce}
+.btn-orange,.button-primary,.button-ink{background:#fa5c75;border-color:#fa5c75;color:#fff;box-shadow:0 3px 8px #fa5c751c}
+.btn-orange:hover,.button-primary:hover,.button-ink:hover{background:#e74764;border-color:#e74764;color:#fff}
+.btn-blue{background:#6750e8;border-color:#6750e8;color:white}
+.btn-blue:hover{background:#5540ce;border-color:#5540ce}
+.btn-light,.top-login{background:#fff;border-color:#ded7f0;color:#57428e}
+.btn-light:hover,.top-login:hover{background:#f2eeff;border-color:#b5a5eb}
+.grade-selector .grade-bar .chip{background:#f7f4ff;border-color:#e4dcf6;color:#6a55a2}
+.grade-selector .grade-bar .chip:hover{background:#eee7ff;border-color:#b4a2eb}
+.grade-selector .grade-bar .chip.active{background:#6750e8;border-color:#6750e8;color:#fff;box-shadow:0 3px 10px #6750e824}
+.grade-selector .chip i{color:#a296c8}.grade-selector .chip.active i{color:#fff}
+.class-picker{background:#f0ebff;border-color:#ded4f7}
+.class-picker>button.active,.class-picker>button[aria-pressed=true]{background:#6750e8;border-color:#6750e8;color:#fff}
+.class-picker>button:hover{background:#e4dbff}.class-picker>button.active:hover{background:#5540ce}
+.grade-selector-heading .eyebrow,.eyebrow,.section-label{color:#8474ac}
+.grade-selector-heading>span:last-child{color:var(--muted)}
+.subject-section,.review-section{background:#eeebff}
+.highlight:after{background:#ffe576}
+.demo-sheet{box-shadow:7px 7px 0 #ddd5ff;border-color:#e0d9f3}
+.fraction-bar i{background:#eee9ff}.fraction-bar.half i:nth-child(-n+2),.fraction-bar.quarter i:first-child{background:#8d77ef}
+.subject-tab:hover{background:#f5f1ff}.subject-tab.active:hover{background:#e9e2ff}
+.poster-progress i,.mastery-track i{background:#8b73e8}.poster-progress{background:#eee9f8}
+.search-field,.progress-select select,.input,.textarea,.field input,.password-wrap{border-color:#ded7ec;background:#fff}
+.search-field:focus-within,.password-wrap:focus-within{outline-color:#9a84ee}
+.scan-guide,.hint-panel,.english-course-note,.photo-solution-entry,.concept-board,.visual-method{background:#f0ecff;border-color:#e1daf4;color:#4e407b}
+.level-badge{border-color:#ffe576;background:#fffae6;color:#6a55a2}
+.feedback.good,.demo-feedback.good{color:#3d786a}.feedback.good{background:#e6f5ef}
+.demo-answers>button.correct{background:#e6f5ef;border-color:#73b6a0;color:#346957}
+.feedback.try,.guide-mistake,.demo-answers>button.selected{background:#fff5df;border-color:#f0d896;color:#806339}
+.form-error,.wrong-equation,.demo-feedback.try{color:#ba415e}
+.import-label:focus-within,.upload-zone:focus-within,:where(button,a,input,select,textarea):focus-visible{outline-color:#9a84ee}
+@media(max-width:760px){.hero .demo-sheet{box-shadow:5px 5px 0 #ddd5ff}}

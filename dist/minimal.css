@@ -1,0 +1,110 @@
+/* Clear type, quiet surfaces and fewer decorative layers. */
+body.in-lesson{background:#eeebf4}
+.in-lesson .learning-shell{--ink:#51475f!important;--wash:#ebe6f1!important;background:#eeebf4;border-color:#dcd5e5;box-shadow:none}
+.learning-shell .learning-body{background:#eeebf4;background-image:none}
+.learning-shell .learning-header,.learning-shell .learning-footer{background:#e9e4f0;border-color:#dcd5e5;color:#62596d}
+.learning-shell .learning-title h1{color:#494052}
+.learning-shell .eyebrow,.learning-shell .task-kicker,.learning-shell .field-label,.learning-shell .card-id,.learning-shell .reference-button,.learning-shell .game-back,.learning-shell .scratch-details summary,.learning-shell .response-meta,.learning-shell .learning-counter,.learning-shell .learning-counter>span{color:#675b75}
+.learning-shell .stage-badge{background:#e5deed;color:#5d506c;border:0}
+.learning-shell .task-paper{background:#f8f6fa;border-color:#dcd5e5;box-shadow:none}
+.learning-shell .task-prompt{color:#352e3f}
+.learning-shell .visual-method,.learning-shell .concept-board{background:#eae4f0;border-color:#ddd4e7;color:#62556f;box-shadow:none}
+.learning-shell .visual-method b,.learning-shell .visual-method i{background:transparent;color:#6c5e79}
+.learning-shell .written-response,.learning-shell .scalar-field .input{background:#fdfbfe;color:#3e3548;border-color:#cfc4db;box-shadow:none}
+.learning-shell .written-response::placeholder,.learning-shell .scalar-field .input::placeholder{color:#796d83;opacity:1}
+.learning-shell .written-response:focus,.learning-shell .scalar-field .input:focus{border-color:#9682aa;outline:2px solid #b5a4c5;outline-offset:2px;box-shadow:none}
+.learning-shell .learning-actions .btn-orange{background:#78608d;border-color:#78608d;color:#fff;box-shadow:none}
+.learning-shell .learning-actions .btn-orange:hover{background:#665078;border-color:#665078}
+.learning-shell .btn-light{color:#62516f;background:#f8f5fb;border-color:#cfc4db}
+.learning-shell .lesson-art{color:#89769d}
+:root{--paper:#faf9fc;--ink:#29233e;--muted:#625d70;--line:#e5e2ec;--orange:#cc365c;--orange-dark:#b82b4f;--green:#6046cb;--mint:#f0ecfa;--shadow:none}
+body{color:var(--ink);background:var(--paper)}
+.site-header,.topbar{background:#fff;border-color:var(--line)}
+.site-header .logo-symbol,.brand-mark{border-radius:9px;background:#4d388c}
+.logo-symbol span{color:#fff}
+.page-heading h1,.studio-dashboard h1{font-size:34px;letter-spacing:-.04em;line-height:1.25}
+.page-heading>div>p,.hero-lead,.quiet,.muted,.response-note,.inline-note,.library-note,.paper-footnote,.dialog-note,.field small,.subject-footnote{color:#625d70}
+.eyebrow,.section-label,.grade-selector-heading .eyebrow,.sidebar-label{color:#6c5b8b;letter-spacing:.07em}
+.button,.btn,.top-login{border-radius:8px;box-shadow:none;min-height:46px}
+.btn-orange,.button-primary,.button-ink{background:#cc365c;border-color:#cc365c;color:#fff;box-shadow:none}
+.btn-orange:hover,.button-primary:hover,.button-ink:hover{background:#b82b4f;border-color:#b82b4f;box-shadow:none}
+.btn-blue,.learning-actions .btn-orange{background:#6046cb;border-color:#6046cb;color:#fff}
+.btn-blue:hover,.learning-actions .btn-orange:hover{background:#5038b3;border-color:#5038b3;color:#fff}
+.btn-light,.top-login{color:#4f3d7e;background:#fff;border-color:#d6d0e2}
+.btn-light:hover,.top-login:hover{background:#f4f1fb;border-color:#a99acb}
+.card,.curriculum-poster,.library-sidebar,.learning-shell,.guide-section,.task-paper{box-shadow:none;border-color:var(--line);border-radius:10px}
+.grade-selector{padding:18px 20px;margin:22px 0 25px;border-radius:10px;background:#fff}
+.grade-selector-heading{margin-bottom:12px}
+.grade-selector .grade-bar{gap:10px}
+.grade-selector .grade-bar .chip{min-height:62px;padding:12px 16px;border-radius:8px;background:#faf9fd;border-color:#e3dfea;color:#5a4c76;box-shadow:none}
+.grade-selector .chip strong{font-size:25px}.grade-selector .chip i{display:none}
+.grade-selector .grade-bar .chip.active{background:#6046cb;border-color:#6046cb;color:#fff;box-shadow:none}
+.grade-selector .grade-bar .chip.active strong,.grade-selector .grade-bar .chip.active>span{color:#fff}
+.library-sidebar{background:#fff}.subject-tab{color:#51495f;font-size:13px;border-radius:7px}
+.subject-tab b{color:#686174}.subject-tab.active{background:#eee9fa;color:#5337aa}.subject-tab.active b{color:#5337aa}
+.tab-icon{background:#f0ecf8!important;color:#645087!important;border-radius:6px}
+.sidebar-note{display:none}
+.library-tools{gap:12px}.search-field,.progress-select select{background:#fff;border:1px solid #dcd6e6;border-radius:8px;color:#4f465d}
+.library-tools{flex-wrap:wrap}.library-tools .search-field{flex-basis:100%}
+.progress-filters{display:flex;gap:5px;padding:4px;border:1px solid #dfd7e7;background:#eee9f3;border-radius:9px;max-width:100%;flex-wrap:wrap}
+.progress-filters button{min-height:38px;padding:8px 15px;background:transparent;border:1px solid transparent;border-radius:6px;color:#665971;font:600 12px Manrope,'Segoe UI',sans-serif;box-shadow:none}
+.progress-filters button:hover{background:#e3daed;color:#4f415c}
+.progress-filters button[aria-pressed=true]{background:#fff;border-color:#d7ccdf;color:#51405f}
+.progress-filters button:focus-visible{outline:2px solid #9a85ac;outline-offset:2px}
+@media(max-width:500px){.progress-filters{width:100%;gap:3px}.progress-filters button{flex:1;padding:8px 6px;font-size:11px}}
+.search-field input{color:#29233e;font-size:14px}.search-field input::placeholder{color:#716a80;opacity:1}
+.search-field:focus-within{border-color:#7960bf;outline:2px solid #7960bf;outline-offset:2px;box-shadow:none}
+.search-field input:focus,.search-field input:focus-visible{outline:none;box-shadow:none;border:0;background:transparent}
+.library-results-line,.poster-info small,.poster-info em,.poster-length{color:#62596f!important}
+.library-posters{gap:16px}
+.library-posters .curriculum-poster{border:1px solid #e3deeb!important;border-radius:10px;box-shadow:none}
+.library-posters .curriculum-poster:hover{border-color:#a995d2!important;box-shadow:none;transform:none}
+.library-posters .curriculum-poster .poster-art{height:76px;min-height:76px;background:#f3f0fa;border-bottom:0;justify-items:start;padding-left:16px}
+.library-posters .poster-art::before,.library-posters .poster-art::after{display:none}
+.library-posters .poster-art .lesson-art{width:85px;height:62px;max-height:62px}
+.library-posters .poster-length{right:15px;top:24px;background:#fff!important;border:1px solid #e4dfee;padding:4px 7px!important;border-radius:5px!important;font-size:10px!important}
+.library-posters .poster-info{padding:16px 19px 20px;gap:9px;min-height:172px}
+.library-posters .poster-info strong{color:#29233e;font-size:15px;line-height:1.55}
+.poster-progress{height:3px;background:#ece8f2}.poster-progress i{background:#8065ce}
+.poster-info small{font-size:10px;letter-spacing:.02em}.poster-info em{font-size:11px}
+.lesson-art{color:#5c4387}.guide-time,.step-arrow{color:#655176}.step-number{color:#59446f;background:#eee8f5}
+.learning-counter,.learning-counter>span{color:#62576f}.visual-method i{color:#655176}.btn-orange span,.button-primary span{color:inherit}
+.new-topic-hero,.guide-hero{background:#f0ecf9;border:1px solid #e1d9ef;border-radius:10px!important;box-shadow:none}
+.new-topic-hero h1,.guide-hero h1{color:#29233e}.new-topic-hero p,.guide-hero p{color:#5f556e}
+.companion-talk{display:none}
+.learning-title h1{font-size:26px}.task-prompt{color:#29233e}.response-note{color:#625d70!important}
+.studio-start-item{box-shadow:none;background:#f2eef9;color:#392d50;border-color:#e2dbed;border-radius:10px}
+.studio-start-item span,.studio-start-item strong,.studio-start-item b{color:#392d50}
+.studio-profile-bar p,.studio-current span,.stat-card span{color:#625d70}
+/* Legacy dark sections now use light surfaces: explicitly reset their type. */
+.subject-section,.review-section{background:#f2eff8;color:#29233e}
+.subject-section h2,.subject-section p,.subject-section .subject-name,.subject-section .subject-link,.subject-section .library-topline,.review-section h2,.review-section h3,.review-section p{color:#29233e}
+.subject-section .section-label,.subject-section .subject-footnote,.subject-section .library-note,.subject-section .library-topline>span:last-child,.subject-section .subject-link small,.review-section .section-label,.review-limit>span{color:#62576f}
+.subject-link{border-color:#d9d2e4}.subject-link:hover{color:#50369c}.subject-link .subject-arrow{color:#68548d}
+.subject-link:hover .subject-name{color:#50369c}
+.class-picker{border-color:#dcd4e8;background:#fff;box-shadow:none}.class-picker>button{color:#55456f}.class-picker>button.active,.class-picker>button[aria-pressed=true]{background:#6046cb;border-color:#6046cb;color:#fff}
+.class-caption{color:#514166!important}
+.subject-intro>p.subject-footnote{color:#62576f}
+.review-paper,.reference-page,.demo-sheet,.auth-dialog{background:#fff;color:#29233e;box-shadow:none;border:1px solid #dfd9e8;border-radius:12px}
+.review-paper p,.review-paper h3{color:#29233e}.review-paper .wrong-equation{color:#aa3253}.review-paper .wrong-equation span{color:#8c2946}
+.review-limit{border-color:#d9d2e4}.review-limit p{color:#62576f}
+.hero-copy h1{font-size:clamp(40px,5vw,68px);letter-spacing:-.055em;line-height:1.14}
+.hero-topline,.hero-baseline,.sheet-top,.page-index{color:#62576f}
+.hero-topline{margin-bottom:38px}.hero-baseline{margin-top:42px}
+.hero .demo-sheet{box-shadow:none}.highlight:after{height:4px;background:#ddd4f4;bottom:-5px}
+.pencil-note,.reference-page .worked-example svg{display:none}
+.demo-title h2{font-size:26px}.demo-feedback{color:#62576f;font-size:12px}.demo-answers>button{border-color:#d7cee6;color:#4f3b77;border-radius:7px;background:#fff}
+.demo-answers>button:hover{background:#f3eefb;border-color:#a492c7}
+.raccoon-aside{display:none}.final-heading h2>span{display:none}
+.form-error,.demo-feedback.try{color:#aa3253}.feedback.good,.demo-feedback.good{color:#326c58}
+.footer,.site-footer{color:#625d70}.footer-brand{color:#3d3155}
+@media(max-width:760px){
+ .hero-copy h1{font-size:clamp(36px,8vw,54px)}.hero .demo-sheet{box-shadow:none}
+ .page-heading h1,.studio-dashboard h1{font-size:29px}
+ .grade-selector{padding:16px 12px}.grade-selector .grade-bar{gap:6px}.grade-selector .grade-bar .chip{min-height:65px;padding:10px 4px}
+ .library-posters .curriculum-poster .poster-art{height:62px;min-height:62px;padding-left:8px}
+ .library-posters .poster-art .lesson-art{height:48px;width:65px}.library-posters .poster-length{position:static;margin-right:8px;justify-self:end;font-size:9px!important;padding:3px 5px!important}
+ .library-posters .poster-art{display:flex;justify-content:space-between;align-items:center}
+ .library-posters .poster-info{padding:13px;min-height:180px}.library-posters .poster-info strong{font-size:14px}
+ .hero-topline{margin-bottom:28px}.hero-baseline{margin-top:30px}
+}

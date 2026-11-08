@@ -1,4 +1,10 @@
 .env
-node_modules
+.env.*
+**/node_modules
 data
 docs
+.git
+.github
+*.sqlite
+*.sqlite-*
+*.log

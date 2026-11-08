@@ -1,0 +1,80 @@
+name: Docker hackathon release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - Dockerfile
+      - .dockerignore
+      - package*.json
+      - server/**
+      - dist/**
+      - requirements.txt
+      - scripts/export-requirements.mjs
+      - .github/workflows/docker-hackathon.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docker-hackathon-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-test-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Build image
+        run: docker build --pull -t ponyatno:hackathon .
+      - name: Verify locked dependency inventory
+        run: docker run --rm -v "$PWD:/workspace:ro" -w /workspace --entrypoint node ponyatno:hackathon scripts/export-requirements.mjs --check
+      - name: Run application tests in image
+        run: docker run --rm ponyatno:hackathon npm test
+      - name: Check HTTP and persistent SQLite storage
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'docker logs ponyatno-smoke || true; docker rm -f ponyatno-smoke || true; docker volume rm ponyatno-smoke-data || true' EXIT
+          docker volume create ponyatno-smoke-data
+          docker run -d --name ponyatno-smoke -p 127.0.0.1:3000:3000 -v ponyatno-smoke-data:/app/data ponyatno:hackathon
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3000/api/health -o "$RUNNER_TEMP/health.json"; then break; fi
+            sleep 1
+          done
+          python -c 'import json,os; assert json.load(open(os.environ["RUNNER_TEMP"]+"/health.json"))["ok"] is True'
+          curl -fsS http://127.0.0.1:3000/ -o "$RUNNER_TEMP/index.html"
+          test -s "$RUNNER_TEMP/index.html"
+          curl -fsS -H 'Content-Type: application/json' --data '{"username":"container_smoke","password":"synthetic-smoke-2026","name":"Smoke Test"}' http://127.0.0.1:3000/api/auth/register -o "$RUNNER_TEMP/register.json"
+          docker restart ponyatno-smoke
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3000/api/health -o /dev/null; then break; fi
+            sleep 1
+          done
+          curl -fsS -H 'Content-Type: application/json' --data '{"username":"container_smoke","password":"synthetic-smoke-2026"}' http://127.0.0.1:3000/api/auth/login -o "$RUNNER_TEMP/login.json"
+          test "$(docker exec ponyatno-smoke id -u)" != 0
+          echo 'HTTP, registration, login after restart, persistent SQLite and non-root user: OK'
+      - name: Export tested Docker image and checksum
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker image inspect ponyatno:hackathon > image-inspect.json
+          docker save ponyatno:hackathon | gzip > ponyatno-docker-linux-amd64.tar.gz
+          sha256sum ponyatno-docker-linux-amd64.tar.gz > SHA256SUMS
+          docker load -i ponyatno-docker-linux-amd64.tar.gz
+      - name: Publish downloadable image
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="docker-${GITHUB_SHA:0:12}"
+          if ! gh release view "$tag" >/dev/null 2>&1; then
+            gh release create "$tag" --target "$GITHUB_SHA" --title 'Понятно: Docker-образ для хакатона' --notes 'Linux/amd64. Tested: application tests, HTTP, registration/login, SQLite persistence and non-root execution. Load with: docker load -i ponyatno-docker-linux-amd64.tar.gz. Run with: docker run --rm -p 127.0.0.1:3000:3000 -v ponyatno-data:/app/data ponyatno:hackathon'
+          fi
+          gh release upload "$tag" ponyatno-docker-linux-amd64.tar.gz SHA256SUMS image-inspect.json --clobber
